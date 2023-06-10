@@ -1,5 +1,4 @@
 import {FC, memo, ReactElement} from 'react';
-import * as cn from 'classnames';
 
 import styles from './Paginator.module.scss';
 
@@ -23,7 +22,7 @@ const Paginator: FC<PaginatorProps> = memo(({ currentPage, totalCount, onPageCha
         items.push(
             <div
                 key={number}
-                className={cn(styles.page, { [styles.active]: number === currentPage })}
+                className={styles.page + (number === currentPage ? ' ' + styles.active : '')}
                 onClick={() => onPageChange(number)}
             >
                 {number}
