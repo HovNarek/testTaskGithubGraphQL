@@ -10,7 +10,7 @@ import Error from "../Error/Error";
 import {debounce} from '../../utils/debounce';
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 
-import styles from './HomePage.module.scss'
+import './HomePage.scss'
 
 const HomePage: FC = () => {
     const dispatch = useAppDispatch();
@@ -34,7 +34,7 @@ const HomePage: FC = () => {
     };
 
     return (
-        <div className={styles.homePage}>
+        <div className="homePage">
             <Search initSearchInput={searchQuery} onSearchInput={afterSearchInput}/>
             {error ? <Error message={`An error occurred: ${error}`}/> :
                 (

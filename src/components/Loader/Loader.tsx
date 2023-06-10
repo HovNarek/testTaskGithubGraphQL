@@ -1,11 +1,11 @@
 import {FC} from 'react';
 
-import styles from './Loader.module.scss';
+import './Loader.scss';
 
 const Loader: FC = () => {
     return (
-        <div className={styles.loader}>
-            <div className={styles.spinner}></div>
+        <div className="loader">
+            <div className="spinner"></div>
         </div>
     );
 };

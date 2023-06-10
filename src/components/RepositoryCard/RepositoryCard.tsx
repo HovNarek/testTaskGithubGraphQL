@@ -10,7 +10,7 @@ import { Language, Repository } from '../../types';
 import Loader from "../Loader/Loader";
 import Error from "../Error/Error";
 
-import styles from "./RepositoryCard.module.scss";
+import "./RepositoryCard.scss";
 
 const RepositoryCard: FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -36,7 +36,7 @@ const RepositoryCard: FC = () => {
     const formattedDate = format(new Date(repository.updatedAt), 'dd.MM.yyyy HH:mm');
 
     return (
-        <div className={styles.container}>
+        <div className="containerRepositoryCard">
             <h3>
                 {repository.name} - <span>{repository.stargazerCount}</span> stars - <span>{formattedDate}</span>
             </h3>

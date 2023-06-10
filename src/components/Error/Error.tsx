@@ -1,5 +1,6 @@
-import styles from './Error.module.scss';
 import {FC} from "react";
+
+import './Error.scss';
 
 interface ErrorComponentProps {
     message: string;
@@ -7,8 +8,8 @@ interface ErrorComponentProps {
 
 const ErrorComponent: FC<ErrorComponentProps> = ({ message }) => {
     return (
-        <div className={styles.errorContainer}>
-            <span className={styles.errorMessage}>{message}</span>
+        <div className="errorContainer">
+            <span className="errorMessage">{message}</span>
         </div>
     );
 };

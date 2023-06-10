@@ -10,7 +10,7 @@ import {setRepositories} from "../../store/repositoriesSlice";
 import {setError} from "../../store/errorSlice";
 import Loader from "../Loader/Loader";
 
-import styles from "./RepositoryList.module.scss";
+import "./RepositoryList.scss";
 
 const RepositoryList: FC = memo(() => {
     const dispatch = useAppDispatch();
@@ -45,11 +45,11 @@ const RepositoryList: FC = memo(() => {
     const repositoriesForPage = repositories.slice(startIndex - 1, endIndex);
 
     return (
-        <div className={styles.repositoryList}>
+        <div className="repositoryList">
             {loading ? <Loader /> :
                 (
                     repositoriesForPage.map((repository) => (
-                        <div className={styles.repositoryItem} key={repository.id}>
+                        <div className="repositoryItem" key={repository.id}>
                             <Link to={`/repository/${repository.id}`}>
                                 <h3>{repository.name}</h3>
                             </Link>

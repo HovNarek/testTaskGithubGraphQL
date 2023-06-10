@@ -1,6 +1,6 @@
 import {ChangeEvent, FC, memo, useState} from 'react';
 
-import styles from './Search.module.scss';
+import './Search.scss';
 
 interface SearchProps {
     initSearchInput: string;
@@ -18,12 +18,12 @@ const Search: FC<SearchProps> = memo(
         };
 
         return (
-            <div className={styles.searchContainer}>
+            <div className="searchContainer">
                 <input
                     type="text"
                     value={searchInput}
                     onChange={handleSearchInput}
-                    className={styles.searchInput}
+                    className="searchInput"
                     placeholder="Search..."
                 />
             </div>

@@ -5,7 +5,7 @@ import App from './App.tsx'
 import './index.css'
 
 createRoot(document.getElementById('root') as HTMLElement).render(
-  <StrictMode>
+  // <StrictMode>
     <App />
-  </StrictMode>,
+  // </StrictMode>,
 )
